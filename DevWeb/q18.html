@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-radio, .custom-checkbox {
+            display: none; /* Oculta o input padrão */
+        }
+        .custom-radio-label, .custom-checkbox-label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            display: inline-block;
+            line-height: 24px;
+            margin-right: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .custom-radio-label::before, .custom-checkbox-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+            background-color: white;
+        }
+        .custom-checkbox-label::before {
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #28a745;
+        }
+        .custom-radio:checked + .custom-radio-label::before {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .custom-checkbox:checked + .custom-checkbox-label::before {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .custom-checkbox:checked + .custom-checkbox-label::after {
+            content: '✔';
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <h2>Botões de Rádio</h2>
+            <input type="radio" id="radio1" name="radio-group" class="custom-radio">
+            <label for="radio1" class="custom-radio-label">Opção 1</label>
+            
+            <input type="radio" id="radio2" name="radio-group" class="custom-radio">
+            <label for="radio2" class="custom-radio-label">Opção 2</label>
+            
+            <input type="radio" id="radio3" name="radio-group" class="custom-radio">
+            <label for="radio3" class="custom-radio-label">Opção 3</label>
+        </div>
+    
+        <div>
+            <h2>Checkboxes</h2>
+            <input type="checkbox" id="checkbox1" class="custom-checkbox">
+            <label for="checkbox1" class="custom-checkbox-label">Checkbox 1</label>
+            
+            <input type="checkbox" id="checkbox2" class="custom-checkbox">
+            <label for="checkbox2" class="custom-checkbox-label">Checkbox 2</label>
+            
+            <input type="checkbox" id="checkbox3" class="custom-checkbox">
+            <label for="checkbox3" class="custom-checkbox-label">Checkbox 3</label>
+        </div>
+    </main>
+</body>
+</html>

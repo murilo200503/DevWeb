@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu {
+            width: 200px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            margin-bottom: 10px;
+        }
+        .menu a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #555;
+        }
+        .menu a:nth-child(1):hover {
+            background-color: #ff5733; /* Cor para o primeiro item */
+        }
+        .menu a:nth-child(2):hover {
+            background-color: #33ff57; /* Cor para o segundo item */
+        }
+        .menu a:nth-child(3):hover {
+            background-color: #3357ff; /* Cor para o terceiro item */
+        }
+        .menu a:nth-child(4):hover {
+            background-color: #f3ff33; /* Cor para o quarto item */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <ul class="menu">
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+        </ul>
+    </main>
+</body>
+</html>
